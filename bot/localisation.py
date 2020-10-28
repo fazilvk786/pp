@@ -18,7 +18,7 @@ from bot.get_cfg import get_config
 
 
 class Localisation:
-    START_TEXT = "WelCome..💌 , \n\n I am only Bot in Telegram , who is able reduce size of video files by compressing them . Send me any Telegram video , I will try till my last breath...❤️</b> \n\n Send /help to know how to guide and use  me.. \n\n"
+    START_TEXT = "WelCome..💌 , \n\n *I am only Bot in Telegram , who is able reduce size of video files by compressing them .* Send me any Telegram video , I will try till my last breath...❤️</b> \n\n Send /help to know how to guide and use  me.. \n\n"
    
     ABS_TEXT = " Don't be selfish...😐"
     
@@ -29,23 +29,23 @@ class Localisation:
     
     UPLOAD_START = "Uploading is in Progress ...🐝 \n"
     
-    COMPRESS_START = "⚙️ Trying to compress... 🗜️  ah..  it's very hard to do it 🙄 "
+    COMPRESS_START = "⚙️ Trying to Reduce File Size... 🗜️  \n Time will Vary According to your File compatiblity ."
     
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95 GB due to Telegram limitations. 🔒  "
     
-    COMPRESS_SUCCESS = " CompressEd By :- @TGcompressRo_Bot  ..😊 \n 📥 Downloaded in {}\n\n🗜️ Compressed in {} 👷\n\n📤 Uploaded in {}"
+    COMPRESS_SUCCESS = " @TGcompressBot 🐥\n\n 🐘 Downloaded in {}\n🗜️ Compressed in {} 👷\n🕊️ Uploaded in {}"
 
-    COMPRESS_PROGRESS = "⏳ ETA: {}\n🚀 Progress: {}%"
+    COMPRESS_PROGRESS = "⏳ Estimated Time : {}\n🌱 Work Done : {}%"
 
     SAVED_CUSTOM_THUMB_NAIL = "Custom thumbnail saved. This image will be used in the video. " 
     
-    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully. 😐"
+    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully. 🚽 "
     
-    SAVED_RECVD_DOC_FILE = "✅ Downloaded Successfully. ✌️ "
+    SAVED_RECVD_DOC_FILE = "Downloaded Successfully..✌️ "
     
     CUSTOM_CAPTION_UL_FILE = " "
     
@@ -59,7 +59,7 @@ class Localisation:
     
     HELP_MESSAGE = get_config(
         "STRINGS_HELP_MESSAGE",
-        " Hey You Noobie .....👻/n/n Here is simple guide to use me 🤖 /n 1. Send me video which you want to compress ...😌 /n 2. Reply  '/compress Percentage' to the media file . [e.g. reply 'compress 50' to video if you want to reduce file size to half of previous size] /n/n 3. Now things are in my hands now . Don't worry i will do rest thing by my own . You just need to Wait ...😛 /n/n/n Made in INDIA with 💌  "
+        " Hey You Noobie .....👻\n\n Here is simple guide to use me 🤖 \n 1. Send me video which you want to compress ...😌 \n 2. Reply  '/compress Percentage' to the media file . [e.g. reply 'compress 50' to video if you want to reduce file size to half of previous size] \n\n 3. Now things are in my hands now . Don't worry i will do rest thing by my own . You just need to Wait ...😛 /n/n/n Made in INDIA with 💌  "
     )
     WRONG_MESSAGE = get_config(
         "STRINGS_WRONG_MESSAGE",

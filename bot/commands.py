@@ -20,29 +20,29 @@ from bot.get_cfg import get_config
 class Command:
     START = get_config(
         "COMMAND_START",
-        "start"
+        "start@TgCompressbot"
     )
     COMPRESS = get_config(
         "COMMAND_COMPRESS",
-        "compress"
+        "compress@TgCompressbot"
     )
     CANCEL = get_config(
         "COMMAND_CANCEL",
-        "cancel"
+        "cancel@TgCompressbot"
     )
     STATUS = get_config(
         "COMMAND_STATUS",
-        "status"
+        "status@TgCompressbot"
     )
     EXEC = get_config(
         "COMMAND_EXEC",
-        "exec"
+        "exec@TgCompressbot"
     )
     HELP = get_config(
         "COMMAND_HELP",
-        "help"
+        "help@TgCompressbot"
     )
     UPLOAD_LOG_FILE = get_config(
         "COMMAND_UPLOAD_LOG_FILE",
-        "log"
+        "log@TgCompressbot"
     )

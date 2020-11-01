@@ -18,14 +18,14 @@ from bot.get_cfg import get_config
 
 
 class Localisation:
-    START_TEXT = "WelCome..💌 , \n\n *I am only Bot in Telegram , who is able reduce size of video files by compressing them .* Send me any Telegram video , I will try till my last breath...❤️</b> \n\n Send /help to know how to guide and use  me.. \n\n"
+    START_TEXT = "WelCome..💌 , \n\n <b> I am only Bot in Telegram , who is able reduce size of video files by compressing them . Send me any Telegram video , I will try till my last breath...❤️</b> \n\n Send /help to know how to guide and use  me.. \n\n"
    
     ABS_TEXT = " Don't be selfish...😐"
     
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     
     
-    DOWNLOAD_START = "Downloading your file....📥 \n"
+    DOWNLOAD_START = "Downloading your file....📥 \n\n Time will Vary According to your File compatiblity ..🐦   "
     
     UPLOAD_START = "Uploading is in Progress ...🐝 \n"
     

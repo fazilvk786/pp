@@ -59,7 +59,7 @@ class Localisation:
     
     HELP_MESSAGE = get_config(
         "STRINGS_HELP_MESSAGE",
-        " Hey You Noobie .....👻\n\n Here is simple guide to use me 🤖 \n 1. Send me video which you want to compress ...😌 \n 2. Reply  '/compress Percentage' to the media file . [e.g. reply 'compress 50' to video if you want to reduce file size to half of previous size] \n\n 3. Now things are in my hands now . Don't worry i will do rest thing by my own . You just need to Wait ...😛 /n/n/n Made in INDIA with 💌  "
+        "Here is simple guide to use me 🤖 \n\n 1. Send me video which you want to compress ...🐜 \n 2. Reply <b> '/compress Percentage' </b> to the media file .🐸 \n\n 3. I will do Rest Things ..🐾\n\n\n <b> Made in INDIA with 💌</b> "
     )
     WRONG_MESSAGE = get_config(
         "STRINGS_WRONG_MESSAGE",

@@ -39,10 +39,9 @@ from bot.helper_funcs.utils import(
         
 async def incoming_start_message_f(bot, update):
     """/start command"""
-if update.from_user.id not in AUTH_USERS:
+    if update.from_user.id not in AUTH_USERS:
         await update.message.delete()
         return
-    
     # LOGGER.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
@@ -52,8 +51,8 @@ if update.from_user.id not in AUTH_USERS:
     
 async def incoming_compress_message_f(bot, update):
   """/compress command"""
-
-if update.from_user.id not in AUTH_USERS:
+    
+  if update.from_user.id not in AUTH_USERS:
     try:
       await update.message.delete()
     except:
@@ -61,10 +60,9 @@ if update.from_user.id not in AUTH_USERS:
     return
   if update.reply_to_message is None:
     try:
-    
       await bot.send_message(
         chat_id=update.chat.id,
-        text=" Please Reply to Telegram Media.. 📂",
+        text="Please Reply to Telegram Media.. 📂",
         reply_to_message_id=update.message_id
       )
     except:

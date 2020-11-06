@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="🤬 Reply to telegram media 🤬",
+        text=" Please Reply to Telegram Media.. 📂",
         reply_to_message_id=update.message_id
       )
     except:
@@ -78,7 +78,7 @@ async def incoming_compress_message_f(bot, update):
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="🤬 Value should be 10 - 90",
+            text="Values between 10 - 90 please...🚜",
             reply_to_message_id=update.message_id
           )
           return

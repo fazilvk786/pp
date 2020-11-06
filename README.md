@@ -2,9 +2,11 @@
 
 ## Video Compressor Bot
 
-## HOW TO DEPLOY YOUTUBE TUTORIAL
-
-<a href="https://youtu.be/YEwAN3iTGyE"><img src="https://img.shields.io/badge/How%20To-Deploy-red.svg?logo=Youtube"></a>
+## Advance Features than Main Repo :-
+  ● Most Beautiful & innovative user interface
+  ● included Group Support 
+   For this go to Commands.py & change @tgcompressbot by your bot userNamE ..😋😋
+   & Click Deploy...
 
 #### The Easy Way
 
@@ -45,9 +47,7 @@ cancel - Stop the process.
 log - Get log
 help - To know about bot
 ```
-## CREDITS
 
-[@SpEcHide](https://github.com/spechide/publicleech)
 
 #### LICENSE
 - GPLv3

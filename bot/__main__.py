@@ -52,7 +52,7 @@ if __name__ == "__main__" :
         bot_token=TG_BOT_TOKEN,
         api_id=APP_ID,
         api_hash=API_HASH,
-        workers=2
+        workers=4
     )
     #
     app.set_parse_mode("html")

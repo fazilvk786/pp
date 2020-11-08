@@ -38,15 +38,11 @@ from bot.helper_funcs.utils import(
 )
         
 async def incoming_start_message_f(bot, update):
-    """/start command"""
-    if update.from_user.id not in AUTH_USERS:
-        await update.message.delete()
-        return
+    """/start command""
     # LOGGER.info(update)
     await bot.send_message(
-        chat_id=update.chat.id,
-        text=Localisation.START_TEXT,
-        reply_to_message_id=update.message_id
+       text=Localisation.START_TEXT,
+       reply_to_message_id=update.message_id
     )
     
 async def incoming_compress_message_f(bot, update):

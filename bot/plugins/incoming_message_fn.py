@@ -40,8 +40,8 @@ from bot.helper_funcs.utils import(
 async def incoming_start_message_f(bot, update):
     """/start command""
 if update.from_user.id not in AUTH_USERS:
-        await message.reply_text("Hello .. Sorry but I am Bound to work @CompressZone & @Video_compress : join Me there and Compress your video ")
-        
+        await update.message.delete()
+        return
     # LOGGER.info(update)
     await bot.send_message(
        text=Localisation.START_TEXT,

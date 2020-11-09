@@ -44,7 +44,7 @@ async def incoming_start_message_f(bot, update):
         return
     # LOGGER.info(update)
     await bot.send_message(
-        chat_id=update.chat.id
+        chat_id=update.chat.id,
         text=Localisation.START_TEXT,
         reply_to_message_id=update.message_id
     )
@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="Please Reply to telegram media 🔘 ",
+        text="Please Reply to Telegram Media.. 📂",
         reply_to_message_id=update.message_id
       )
     except:
@@ -78,7 +78,7 @@ async def incoming_compress_message_f(bot, update):
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="Please Keep Value between 10- 90 .",
+            text="Values between 10 - 90 please.",
             reply_to_message_id=update.message_id
           )
           return
@@ -126,12 +126,12 @@ async def incoming_compress_message_f(bot, update):
       if( video is None ):
         try:
           await sent_message.edit_text(
-            text="Download stopped ▶️."
+            text="Download stopped"
           )
         except:
           pass
         delete_downloads()
-        LOGGER.info("Download stopped ▶️.")
+        LOGGER.info("Download stopped")
         return
     except (ValueError) as e:
       try:
@@ -164,7 +164,7 @@ async def incoming_compress_message_f(bot, update):
     if duration is None or bitrate is None:
       try:
         await sent_message.edit_text(                
-          text="🔺 Getting video meta data failed 🔺 "                
+          text="⚠️ Getting video meta data failed ⚠️"                
         )
       except:
           pass          
@@ -246,7 +246,7 @@ async def incoming_compress_message_f(bot, update):
     delete_downloads()
     try:
       await sent_message.edit_text(                    
-        text="<b> Please Recheck Your Request . it looks like it is not  Video ▶️ ."               
+        text="NOT Supported Media Type ."               
       )
     except:
       pass
@@ -258,15 +258,15 @@ async def incoming_cancel_message_f(bot, update):
   if os.path.exists(status):
     inline_keyboard = []
     ikeyboard = []
-    ikeyboard.append(InlineKeyboardButton("Yes 🔴 ", callback_data=("fuckingdo").encode("UTF-8")))
-    ikeyboard.append(InlineKeyboardButton("No 🌕 ", callback_data=("fuckoff").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("Yes 🔺", callback_data=("fuckingdo").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("No ♠️", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await update.reply_text("<b> This will stop Compression Process ,Are you sure..??</b> \n\n", reply_markup=reply_markup, quote=True)
+    await update.reply_text("<b> Are you sure ..??  </b>", reply_markup=reply_markup, quote=True)
   else:
     delete_downloads()
     await bot.send_message(
       chat_id=update.chat.id,
-      text="No active compression exists",
+      text="No Work in Progress 📭",
       reply_to_message_id=update.message_id
     )

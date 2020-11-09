@@ -38,15 +38,15 @@ from bot.helper_funcs.utils import(
 )
         
 async def incoming_start_message_f(bot, update):
-    """/start command""
-if update.from_user.id not in AUTH_USERS:
+    """/start command"""
+    if update.from_user.id not in AUTH_USERS:
         await update.message.delete()
         return
     # LOGGER.info(update)
-       await bot.send_message(
-       chat_id=update.chat.id,
-       text=Localisation.START_TEXT,
-       reply_to_message_id=update.message_id
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=Localisation.START_TEXT,
+        reply_to_message_id=update.message_id
     )
     
 async def incoming_compress_message_f(bot, update):
@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="Please Reply to Telegram Media.. 📂",
+        text="🤬 Reply to telegram media 🤬",
         reply_to_message_id=update.message_id
       )
     except:
@@ -78,7 +78,7 @@ async def incoming_compress_message_f(bot, update):
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="Values between 10 - 90 please...🚜",
+            text="🤬 Value should be 10 - 90",
             reply_to_message_id=update.message_id
           )
           return
@@ -258,15 +258,15 @@ async def incoming_cancel_message_f(bot, update):
   if os.path.exists(status):
     inline_keyboard = []
     ikeyboard = []
-    ikeyboard.append(InlineKeyboardButton("Yes 🚨", callback_data=("fuckingdo").encode("UTF-8")))
-    ikeyboard.append(InlineKeyboardButton("No ♠️", callback_data=("fuckoff").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("Yes ", callback_data=("fuckingdo").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("No ", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await update.reply_text("<b> Are You Sure... ??  </b>", reply_markup=reply_markup, quote=True)
+    await update.reply_text("This will stop Compression Process ,Are you sure..??", reply_markup=reply_markup, quote=True)
   else:
     delete_downloads()
     await bot.send_message(
       chat_id=update.chat.id,
-      text="No Work in Progress 📭",
+      text="No active compression exists",
       reply_to_message_id=update.message_id
     )

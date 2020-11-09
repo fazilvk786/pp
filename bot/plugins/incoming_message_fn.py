@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="🤬 Reply to telegram media 🤬",
+        text="Please Reply to telegram media 🔘 ",
         reply_to_message_id=update.message_id
       )
     except:
@@ -72,13 +72,13 @@ async def incoming_compress_message_f(bot, update):
   isAuto = False
   if len(update.command) > 1:
     try:
-      if int(update.command[1]) <= 90 and int(update.command[1]) >= 10:
+      if int(update.command[1]) <= 95 and int(update.command[1]) >= 5:
         target_percentage = int(update.command[1])
       else:
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="Keep Value between 10 - 90 .",
+            text="Please Keep Value between 5 - 95 .",
             reply_to_message_id=update.message_id
           )
           return
@@ -126,12 +126,12 @@ async def incoming_compress_message_f(bot, update):
       if( video is None ):
         try:
           await sent_message.edit_text(
-            text="Download stopped"
+            text="Download stopped ▶️."
           )
         except:
           pass
         delete_downloads()
-        LOGGER.info("Download stopped")
+        LOGGER.info("Download stopped ▶️.")
         return
     except (ValueError) as e:
       try:
@@ -164,7 +164,7 @@ async def incoming_compress_message_f(bot, update):
     if duration is None or bitrate is None:
       try:
         await sent_message.edit_text(                
-          text="⚠️ Getting video meta data failed ⚠️"                
+          text="🔺 Getting video meta data failed 🔺 "                
         )
       except:
           pass          
@@ -246,7 +246,7 @@ async def incoming_compress_message_f(bot, update):
     delete_downloads()
     try:
       await sent_message.edit_text(                    
-        text="⚠️ Failed Downloaded path not exist ⚠️"               
+        text="⚠️ Failed ⚠️ \n\n <b> Please Recheck Your Request . it looks like it is not  Video ▶️ ."               
       )
     except:
       pass
@@ -259,10 +259,10 @@ async def incoming_cancel_message_f(bot, update):
     inline_keyboard = []
     ikeyboard = []
     ikeyboard.append(InlineKeyboardButton("Yes 🔴 ", callback_data=("fuckingdo").encode("UTF-8")))
-    ikeyboard.append(InlineKeyboardButton("No 🔵 ", callback_data=("fuckoff").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("No 🌕 ", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await update.reply_text("This will stop Compression Process ,Are you sure..??", reply_markup=reply_markup, quote=True)
+    await update.reply_text("<b> This will stop Compression Process ,Are you sure..??</b> \n\n", reply_markup=reply_markup, quote=True)
   else:
     delete_downloads()
     await bot.send_message(

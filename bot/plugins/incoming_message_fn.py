@@ -45,11 +45,10 @@ async def incoming_start_message_f(bot, update):
     # LOGGER.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Localisation.START_TEXT,
         inline_keyboard = []
         ikeyboard = []  
-                ikeyboard.append(InlineKeyboardButton(
-                    "🙏 My Father 🙏",
+        ikeyboard.append(InlineKeyboardButton(
+                      "🙏 My Father 🙏",
                       url="https://telegram.dog/priyanshu_bhardwaj"
                     )),
         text=Localisation.START_TEXT,

@@ -44,13 +44,7 @@ async def incoming_start_message_f(bot, update):
         return
     # LOGGER.info(update)
     await bot.send_message(
-        chat_id=update.chat.id,
-        inline_keyboard = []
-        ikeyboard = []  
-        ikeyboard.append(InlineKeyboardButton(
-                      "🙏 My Father 🙏",
-                      url="https://telegram.dog/priyanshu_bhardwaj"
-                    )),
+        chat_id=update.chat.id
         text=Localisation.START_TEXT,
         reply_to_message_id=update.message_id
     )
@@ -78,13 +72,13 @@ async def incoming_compress_message_f(bot, update):
   isAuto = False
   if len(update.command) > 1:
     try:
-      if int(update.command[1]) <= 95 and int(update.command[1]) >= 5:
+      if int(update.command[1]) <= 90 and int(update.command[1]) >= 10:
         target_percentage = int(update.command[1])
       else:
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="Please Keep Value between 5 - 95 .",
+            text="Please Keep Value between 10- 90 .",
             reply_to_message_id=update.message_id
           )
           return
@@ -252,7 +246,7 @@ async def incoming_compress_message_f(bot, update):
     delete_downloads()
     try:
       await sent_message.edit_text(                    
-        text="⚠️ Failed ⚠️ \n\n <b> Please Recheck Your Request . it looks like it is not  Video ▶️ ."               
+        text="<b> Please Recheck Your Request . it looks like it is not  Video ▶️ ."               
       )
     except:
       pass

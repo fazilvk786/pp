@@ -43,7 +43,8 @@ if update.from_user.id not in AUTH_USERS:
         await update.message.delete()
         return
     # LOGGER.info(update)
-    await bot.send_message(
+       await bot.send_message(
+       chat_id=update.chat.id,
        text=Localisation.START_TEXT,
        reply_to_message_id=update.message_id
     )
@@ -261,7 +262,7 @@ async def incoming_cancel_message_f(bot, update):
     ikeyboard.append(InlineKeyboardButton("No ♠️", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await update.reply_text("<b> Are you sure ..?? 🛑 </b>", reply_markup=reply_markup, quote=True)
+    await update.reply_text("<b> Are You Sure... ??  </b>", reply_markup=reply_markup, quote=True)
   else:
     delete_downloads()
     await bot.send_message(

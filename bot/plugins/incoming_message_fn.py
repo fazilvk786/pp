@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="Please Reply to Telegram Media.. 📂",
+        text="Please Reply to telegram media ▶️",
         reply_to_message_id=update.message_id
       )
     except:
@@ -78,7 +78,7 @@ async def incoming_compress_message_f(bot, update):
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="Values between 10 - 90 please.",
+            text="Please Keep value between 10 - 90",
             reply_to_message_id=update.message_id
           )
           return
@@ -246,7 +246,7 @@ async def incoming_compress_message_f(bot, update):
     delete_downloads()
     try:
       await sent_message.edit_text(                    
-        text="NOT Supported Media Type ."               
+        text="<b> This is Not Supported Content .</b>               
       )
     except:
       pass
@@ -262,11 +262,11 @@ async def incoming_cancel_message_f(bot, update):
     ikeyboard.append(InlineKeyboardButton("No ♠️", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await update.reply_text("<b> Are you sure ..??  </b>", reply_markup=reply_markup, quote=True)
+    await update.reply_text("<b> Are you sure ..??</b> \n", reply_markup=reply_markup, quote=True)
   else:
     delete_downloads()
     await bot.send_message(
       chat_id=update.chat.id,
-      text="No Work in Progress 📭",
+      text="No active compression exists",
       reply_to_message_id=update.message_id
     )

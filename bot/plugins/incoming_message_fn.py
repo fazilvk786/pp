@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="Please Reply to telegram media ▶️",
+        text="🤬 Reply to telegram media 🤬",
         reply_to_message_id=update.message_id
       )
     except:
@@ -78,7 +78,7 @@ async def incoming_compress_message_f(bot, update):
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="Please Keep value between 10 - 90",
+            text="🤬 Value should be 10 - 90",
             reply_to_message_id=update.message_id
           )
           return
@@ -246,7 +246,7 @@ async def incoming_compress_message_f(bot, update):
     delete_downloads()
     try:
       await sent_message.edit_text(                    
-        text="<b> This is Not Supported Content .</b>               
+        text="⚠️ Failed Downloaded path not exist ⚠️"               
       )
     except:
       pass
@@ -258,11 +258,11 @@ async def incoming_cancel_message_f(bot, update):
   if os.path.exists(status):
     inline_keyboard = []
     ikeyboard = []
-    ikeyboard.append(InlineKeyboardButton("Yes 🔺", callback_data=("fuckingdo").encode("UTF-8")))
-    ikeyboard.append(InlineKeyboardButton("No ♠️", callback_data=("fuckoff").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("Yes 🚫", callback_data=("fuckingdo").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("No 🤗", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await update.reply_text("<b> Are you sure ..??</b> \n", reply_markup=reply_markup, quote=True)
+    await update.reply_text("Are you sure? 🚫 This will stop the compression", reply_markup=reply_markup, quote=True)
   else:
     delete_downloads()
     await bot.send_message(

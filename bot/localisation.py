@@ -18,24 +18,24 @@ from bot.get_cfg import get_config
 
 
 class Localisation:
-    START_TEXT = "WelCome..💌 , \n\n <b> I am only Bot in Telegram , who is able reduce size of video files by compressing them . Send me any Telegram video , I will try till my last breath...❤️</b> \n\n Send /help to know how to guide and use  me.. \n\n"
+    START_TEXT = "Namaste .\n      I am Video Compress Bot . Works only HERE @CompressZONE "
    
     ABS_TEXT = "<b> My father - @priyanshu_bhardwaj </b> \n\n Compress Your File here :- @CompressZone \n Source :- https://github.com/bhardwajjEE/tgvideoCompress"
     
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     
     
-    DOWNLOAD_START = "Downloading your file....🚁 \n Time will Vary According to your File compatiblity ..🐦   "
+    DOWNLOAD_START = "Downloading ...🦏   "
     
-    UPLOAD_START = "Uploading is in Progress ...🐝 \n"
+    UPLOAD_START = "Uploading ...🐝  "
     
-    COMPRESS_START = "⚙️ Trying to Reduce File Size... 🗜️  \n Time will Vary According to your File compatiblity ."
+    COMPRESS_START = "Compressing ...🔧  "
     
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95 GB due to Telegram limitations. 🔒  "
     
-    COMPRESS_SUCCESS = " @TGcompressBot 🐥\n\n 🐘 Downloaded in {}\n🗜️ Compressed in {} 👷\n🕊️ Uploaded in {}"
+    COMPRESS_SUCCESS = "By @TGcompressBot 🐥\n\n 🐘 Downloaded in {}\n🗜️ Compressed in {} 👷\n🕊️ Uploaded in {}"
 
     COMPRESS_PROGRESS = "⏳ Estimated Time : {}\n🌱 Work Done : {}%"
 
@@ -55,11 +55,11 @@ class Localisation:
     
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     
-    FF_MPEG_RO_BOT_STOR_AGE_ALREADY_EXISTS = "<b> I am Not Free Now ; Another process is GoiNg Now....🚕 \n\n 🚨 Cancel Existing Process sending /cancel@tgCompressBot 🚨 "
+    FF_MPEG_RO_BOT_STOR_AGE_ALREADY_EXISTS = "<b> I am Not Free Now ; Another process is GoiNg Now....🚕 "
     
     HELP_MESSAGE = get_config(
         "STRINGS_HELP_MESSAGE",
-        "Here is simple guide to use me 🤖 \n\n1. Send me video which you want to compress ...🔧 \n\n2. Reply <b> '/compress@tgcompressbot [in group @video_Compress] Percentage' </b> to video...💡 \n\n3. I will do Rest Things ..🐾\n\n\n <b> Made in BHARAT with 💌</b> "
+        "Here is simple guide to use me 🤖 \n\n1. Send me video which you want to compress ...🔧 \n\n2. Reply <b> '/compress@tgcompressbot Percentage' </b> to video...💡 \n\n3. I will do Rest Things ..🐾\n\n\n <b> Made in BHARAT with 💌</b> "
     )
     WRONG_MESSAGE = get_config(
         "STRINGS_WRONG_MESSAGE",

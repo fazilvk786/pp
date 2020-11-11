@@ -1,12 +1,7 @@
 ---
 
-## Video Compressor Bot
+## ADVANCED Video Compressor Bot
 
-## Advance Features than Main Repo :-
-  ● Most Beautiful & innovative user interface
-  ● included Group Support 
-   For this go to Commands.py & change @tgcompressbot by your bot userNamE ..😋😋
-   & Click Deploy...
 
 #### The Easy Way
 
@@ -51,3 +46,5 @@ help - To know about bot
 
 #### LICENSE
 - GPLv3
+
+### SEE YOU TOMMORROW

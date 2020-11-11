@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="🤬 Reply to telegram media 🤬",
+        text="Plese Reply to Telegram Media ...🐃",
         reply_to_message_id=update.message_id
       )
     except:
@@ -78,7 +78,7 @@ async def incoming_compress_message_f(bot, update):
         try:
           await bot.send_message(
             chat_id=update.chat.id,
-            text="🤬 Value should be 10 - 90",
+            text="Sorry, But Value should lie between 10 - 90 .",
             reply_to_message_id=update.message_id
           )
           return
@@ -246,7 +246,7 @@ async def incoming_compress_message_f(bot, update):
     delete_downloads()
     try:
       await sent_message.edit_text(                    
-        text="⚠️ Failed Downloaded path not exist ⚠️"               
+        text="Sorry , But this Thing not looks like Video ."               
       )
     except:
       pass
@@ -258,15 +258,15 @@ async def incoming_cancel_message_f(bot, update):
   if os.path.exists(status):
     inline_keyboard = []
     ikeyboard = []
-    ikeyboard.append(InlineKeyboardButton("Yes 🚫", callback_data=("fuckingdo").encode("UTF-8")))
-    ikeyboard.append(InlineKeyboardButton("No 🤗", callback_data=("fuckoff").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("Yes 🔴", callback_data=("fuckingdo").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("No 🖤", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await update.reply_text("Are you sure? 🚫 This will stop the compression", reply_markup=reply_markup, quote=True)
+    await update.reply_text("<b> So , Are you Sure ..?? </b>", reply_markup=reply_markup, quote=True)
   else:
     delete_downloads()
     await bot.send_message(
       chat_id=update.chat.id,
-      text="No active compression exists",
+      text="I am Free Like a 🦋...",
       reply_to_message_id=update.message_id
     )

@@ -62,7 +62,7 @@ async def incoming_compress_message_f(bot, update):
     try:
       await bot.send_message(
         chat_id=update.chat.id,
-        text="Plese Reply to Telegram Media ...🐃",
+        text="Please Reply to Telegram Media ...📽️\n\n",
         reply_to_message_id=update.message_id
       )
     except:
